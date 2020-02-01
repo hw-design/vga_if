@@ -29,7 +29,7 @@ create_project -part xc7a100tcsg324-1 vga_if $outputdir -force
 # Add testbench source file
 add_files -fileset sim_1 ./tb/vga_if_tb.v
 add_files [glob ../../base_components/verilog/src/*.v]
-add_files ./src/vga_if.v
+add_files ./src/*.v
 add_files -fileset constrs_1 ../constraint.xdc
 set_property library work [get_files [glob ../../base_components/verilog/src/*.v]]
 
